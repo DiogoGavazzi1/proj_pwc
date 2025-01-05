@@ -1,0 +1,13 @@
+utilizar para o projeto produtos dos vários países que a API fornece;
+
+PRINCIPAL OBJETIVO:
+permitir a um utilizador conhecer os países existentes no mundo;
+escolher os seus favoritos;
+visualizar detalhes do país;
+realizar filtros por moeda;
+compar produtos online de cada país;
+contactar a equipa;
+
+2.5) wireframes: 
+Loja;
+Carrinho de compras;

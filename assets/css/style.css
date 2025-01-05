@@ -1,0 +1,399 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1;
+    /* Faz o conteúdo principal ocupar o espaço restante */
+}
+
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* Organiza o layout em coluna */
+    overflow-x: hidden;
+}
+
+* {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CARROSSEL */
+.carousel-item {
+    background-color: #EDEDED;
+    padding: 5% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cor_fundo {
+    height: 547px;
+    width: 1440px;
+    background-color: #EDEDED;
+}
+
+.cor_fundo2 {
+    height: 547px;
+    width: 1440px;
+    background-color: #000000;
+}
+
+.img_japa {
+    justify-content: end;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 123, 255, 0.5);
+    border-radius: 50%;
+    filter: invert(100%) sepia(100%) saturate(300%) hue-rotate(180deg);
+}
+
+/* SEÇÃO SERVIÇOS */
+.servicos {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('../img/service.jpg') no-repeat center center / cover;
+    color: white;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.margem {
+    margin-top: 5%;
+}
+
+.txt_cards {
+    font-family: 'Outfit', sans-serif;
+    font-size: 56px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.txt_japa {
+    font-family: 'Outfit', sans-serif;
+    font-size: 56px;
+    font-weight: 900;
+    text-align: left;
+}
+
+.txt_aust {
+    font-family: 'Outfit', sans-serif;
+    font-size: 45px;
+    font-weight: 900;
+    text-align: left;
+}
+
+.card {
+    margin: 15px;
+}
+
+.card-border:hover {
+    border: 2px solid blue;
+    font-size: 18px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
+    /* Empurra o footer para o final */
+}
+
+
+
+/* CSS PAISES */
+.country-details-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 32px;
+}
+
+.back-button {
+    padding: 6px 24px;
+    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.country-details {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top: 64px;
+}
+
+.country-details img {
+    width: 40%;
+    border: 1px solid #ddd;
+}
+
+.details-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    column-gap: 64px;
+    max-height: 180px;
+    flex-wrap: wrap;
+}
+
+.details-text p {
+    margin: 0;
+}
+
+.border-countries {
+    margin-top: 48px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.border-countries a {
+    padding: 4px 16px;
+    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+@media(max-width: 940px) {
+    .country-details {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 32px;
+        gap: 16px;
+    }
+
+    .details-text {
+        max-height: unset;
+    }
+
+    .country-details img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
+
+/* ********************************** */
+/*         Alinhar as dropbox         */
+/* ********************************** */
+
+.select-container {
+    display: flex;
+    gap: 10px;
+    /* Espaçamento horizontal entre os selects */
+    justify-content: center;
+    /* Alinha os selects no centro */
+    align-items: center;
+    /* Alinha verticalmente */
+    margin-top: 10px;
+    /* Adiciona um pouco de espaço acima */
+}
+
+.filter-by-region {
+    padding: 5px;
+    /* Espaçamento interno para melhorar a aparência */
+    font-size: 1rem;
+}
+
+/* ********************************** */
+/*                Footer               */
+/* ********************************** */
+
+footer {
+    margin-top: auto;
+    /* Empurra o footer para o final */
+}
+
+
+/* ********************************** */
+/*                ICONS               */
+/* ********************************** */
+
+.icon {
+    display: inline-block;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ********************************** */
+/*         LISTA DE FAVORITOS         */
+/* ********************************** */
+.container-list-favorites {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(400px);
+    background-color: #555;
+    opacity: 0;
+    width: 400px;
+    height: 100vh;
+    transition: all 0.5s linear;
+}
+
+.container-list-favorites.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.header-favorite {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-favorite i {
+    cursor: pointer;
+}
+
+.list-favorites {
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.list-favorites .card-favorite {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px #00000065;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card-favorite .title {
+    color: #000;
+    flex: 1;
+}
+
+.card-favorite p:last-child {
+    font-weight: 700;
+    font-size: 22px;
+    color: #000;
+}
+
+/* ------------------- */
+
+#added-favorite {
+    color: red;
+    display: none;
+}
+
+#favorite-regular.active {
+    background-color: red;
+    display: none;
+}
+
+#added-favorite.active {
+    display: block;
+    color: red;
+}
+
+
+
+
+/* ********************************** */
+/*           PÁGINA DA LOJA           */
+/* ********************************** */
+
+.fundoloja {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* Alinha todo o conteúdo à direita */
+    text-align: right;
+    /* Alinha o texto à direita */
+    height: 100vh;
+    padding: 20px;
+    background-image: url(../img/video.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+
+.erro-404 h1 {
+    font-family: "Chakra Petch", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2rem;
+    color: #ff3e3e;
+    margin: 0;
+    /* Remove margens adicionais */
+}
+
+.texto-direita h1 {
+    font-family: "Chakra Petch", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0;
+    /* Remove margens adicionais */
+}
+
+.texto-direita p {
+    font-family: "Chakra Petch", serif;
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 10px 0;
+    /* Define margens para espaçamento */
+}
+
+
+
+@media (min-width: 768px) {
+    .fundoloja {
+        flex-direction: column;
+        /* Mantém os elementos empilhados na versão desktop */
+        align-items: flex-end;
+        /* Mantém os elementos alinhados à direita */
+    }
+
+    .erro-404 h1 {
+        font-size: 5rem;
+    }
+
+    .texto-direita h1 {
+        font-size: 4rem;
+    }
+
+    .texto-direita p {
+        font-size: 1.5rem;
+    }
+}
+
+.image_about {
+    flex: 2;
+}
